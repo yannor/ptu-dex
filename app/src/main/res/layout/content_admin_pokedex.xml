@@ -1,0 +1,59 @@
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment"
+    android:name="ys.ptu.activities.fragments.FragAdminPokedex"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:layout="@layout/fragment_admin_pokedex" >
+    <RelativeLayout>
+
+
+
+<LinearLayout
+android:id="@+id/linHeader"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+android:layout_alignParentTop="true"
+android:background="@color/colorPrimary">
+
+<SearchView
+    android:id="@+id/searchView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:iconifiedByDefault="false"
+    android:queryHint="@string/fragment_pokedex_search"
+    android:layout_centerHorizontal="true"
+    android:layout_margin="10dp"
+    android:background="@color/white"/>
+
+
+
+
+</LinearLayout>
+
+
+
+<ListView android:id="@+id/lvPokemons"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:layout_gravity="left|start"
+android:background="@color/colorPrimaryDark"
+xmlns:android="http://schemas.android.com/apk/res/android"
+app:layout_behavior="@string/appbar_scrolling_view_behavior"
+android:layout_below="@id/linHeader" />
+
+<ScrollView
+android:id="@+id/scrollByCategory"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:visibility="invisible"
+android:layout_below="@id/linHeader"
+android:background="@color/colorPrimaryDark">
+
+</ScrollView>
+
+    </RelativeLayout>
+    </fragment>
